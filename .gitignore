@@ -1,0 +1,36 @@
+# Ignore Gradle build files
+.gradle/
+build/
+**/build/
+
+# Ignore IntelliJ/Android Studio project files
+.idea/
+*.iml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+
+# Ignore local.properties (contains SDK path)
+local.properties
+
+# Ignore signing keys or secrets (if any)
+**/signing.properties
+**/keystore.jks
+
+# Ignore app-specific cache or debug files
+*.log
+*.tmp
+
+# Ignore .apk and .aar outputs
+*.apk
+*.aar
+outputs/
+
+# Ignore generated code
+.cxx/
+captures/
+.externalNativeBuild/
