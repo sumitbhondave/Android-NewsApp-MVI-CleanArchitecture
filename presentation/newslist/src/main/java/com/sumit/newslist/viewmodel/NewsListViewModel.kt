@@ -23,7 +23,6 @@ class NewsListViewModel @Inject constructor(
     fun onIntent(intent: NewsListIntent) {
         when (intent) {
             NewsListIntent.FetchNews -> {
-                Log.d("sumit", "onIntent: ")
                 fetchNews()
             }
         }

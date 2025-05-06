@@ -1,22 +1,23 @@
 # News Android App
 
-## Getting Started 
+## Getting Started
 
-Check out the project 
+Check out the project
 
 ```
-git clone 
+git clone https://github.com/sumitbhondave/Android-NewsApp-MVI-CleanArchitecture.git
 ```
+
 This is a simple News app build with Jetpack Compose, MVI, Clean Architecture, Hilt, Retrofit,
 Coroutines, Flow, Coil, etc.
 
 ## Screenshots
 
-| Home                                             |
-|--------------------------------------------------|
-| [![Home](./screenshots/top_headlines.png)](#)    |
-|                                                  |
-| [![Home_Error](./screenshots/home_error.png)](#) |
+| Home                                          |
+|-----------------------------------------------|
+| [![Home](./screenshots/top_headlines.png)]    |
+|                                               |
+| [![Home_Error](./screenshots/home_error.png)] |
 
 ## Features
 

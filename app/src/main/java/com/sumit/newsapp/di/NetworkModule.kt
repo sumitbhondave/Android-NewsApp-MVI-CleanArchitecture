@@ -1,6 +1,7 @@
 package com.sumit.newsapp.di
 
 import com.sumit.data.remote.NewsApiService
+import com.sumit.newsapp.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,15 +20,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL = "https://newsapi.org/v2/"
-
     @Singleton
     @Provides
     fun provideRetrofit(
         okHttpFactory: dagger.Lazy<Call.Factory>,
     ): Retrofit =
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .callFactory { okHttpFactory.get().newCall(it) }
             .addConverterFactory(GsonConverterFactory.create())
             .build()
