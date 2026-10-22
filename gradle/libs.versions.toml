@@ -18,7 +18,7 @@ hiltNavigationCompose = "1.2.0"
 jetbrainsKotlinJvm = "2.1.20"
 coroutines = "1.10.1"
 navigation = "2.8.9"
-ksp = "2.1.20-1.0.32"
+ksp = "2.4.21-1.0.99"
 coil = "2.7.0"
 
 [libraries]
