@@ -16,10 +16,11 @@ import com.sumit.newslist.intent.NewsListIntent
 fun ErrorScreen(
     errorMessage: String,
     buttonText: String,
-    retryAction: (NewsListIntent) -> Unit
+    retryAction: (NewsListIntent) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .padding(16.dp)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,

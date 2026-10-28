@@ -1,6 +1,5 @@
 package com.sumit.newslist.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -15,9 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.sumit.newslist.R
 import com.sumit.newslist.intent.NewsListIntent
@@ -35,12 +32,9 @@ fun NewsListScreen(
     }
 
     Scaffold(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White),
+        modifier = Modifier.fillMaxSize(),
         topBar = {
             CenterAlignedTopAppBar(
-                modifier = Modifier.padding(16.dp),
                 title = { Text(stringResource(R.string.top_headlines)) }
             )
         }
@@ -48,7 +42,9 @@ fun NewsListScreen(
         when {
             viewState.isLoading -> {
                 Box(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator()
@@ -61,7 +57,8 @@ fun NewsListScreen(
                     buttonText = stringResource(R.string.try_again),
                     retryAction = { intent ->
                         viewModel.onIntent(intent)
-                    }
+                    },
+                    modifier = Modifier.padding(innerPadding)
                 )
             }
 
@@ -69,7 +66,7 @@ fun NewsListScreen(
                 viewState.data?.let {
                     NewsList(
                         news = it,
-                        modifier = Modifier.padding(innerPadding)
+                        contentPadding = innerPadding
                     )
                 }
             }
