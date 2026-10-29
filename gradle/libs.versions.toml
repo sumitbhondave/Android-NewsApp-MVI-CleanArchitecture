@@ -1,6 +1,6 @@
 [versions]
-agp = "9.4.1"
-kotlin = "2.2.10"
+agp = "9.14.1"
+kotlin = "2.12.10"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -18,7 +18,7 @@ hiltNavigationCompose = "1.2.0"
 jetbrainsKotlinJvm = "2.1.20"
 coroutines = "1.10.1"
 navigation = "2.8.9"
-ksp = "2.3.6"
+ksp = "2.32.6"
 coil = "2.7.0"
 
 [libraries]
